@@ -49,9 +49,7 @@ namespace TEXTool
 
                 var tool = new TEXTool();
                 tool.OpenFile(inputFile, new FileStream(inputFile, FileMode.Open, FileAccess.Read));
-                tool.FileOpened += (sender, ev) => {
-                    tool.SaveFile(outputFile);
-                };
+                tool.SaveFile(outputFile);
             } else {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
